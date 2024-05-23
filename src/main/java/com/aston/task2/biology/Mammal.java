@@ -1,18 +1,18 @@
 package com.aston.task2.biology;
 
 public abstract class Mammal implements Animal {
-    Spine spine;
+    protected Spine spine;
 
-    public class Spine {
-        int numberOfVertebrae = 46;
+    protected static class Spine {
+        int numberOfVertebrae;
 
         public Spine(int numberOfVertebrae) {
             this.numberOfVertebrae = numberOfVertebrae;
         }
 
-
-        void setNumberOfVertebrae( int numberOfVertebrae) {
-            this.numberOfVertebrae = numberOfVertebrae;
+        @Override
+        public String toString() {
+            return " имеет " + numberOfVertebrae + " позвонков";
         }
     }
 }
